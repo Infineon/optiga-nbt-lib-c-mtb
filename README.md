@@ -5,7 +5,7 @@ This is the OPTIGA&trade; Authenticate NBT Host Library for ModusToolbox&trade;,
 ## Overview
 
 The OPTIGA&trade; Authenticate NBT Host Library for ModusToolbox&trade; is an adapted version of the generic [OPTIGA&trade; Authenticate NBT Host Library for C](https://github.com/infineon/optiga-nbt-lib-c) and targets ModusToolbox&trade; applications that interact with the OPTIGA&trade; Authenticate NBT via the I2C interface.
-The ModusToolbox&trade; version bundles the [OPTIGA&trade; Authenticate NBT Host Library for C](https://github.com/Infineon/optiga-nbt-lib-c) for embedded devices alongside a platform integration for the [PSoC™ 62S2 Wi-Fi Bluetooth&reg; Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439) that is part of the [OPTIGA&trade; Authenticate NBT Development Kit](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Kit).
+The ModusToolbox&trade; version bundles the [OPTIGA&trade; Authenticate NBT Host Library for C](https://github.com/Infineon/optiga-nbt-lib-c) for embedded devices alongside a platform integration for the [PSOC™ 62S2 Wi-Fi Bluetooth&reg; Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439) that is part of the [OPTIGA&trade; Authenticate NBT Development Kit](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Kit).
 As the integration is relying heavily on the ModusToolbox&trade; HAL layer, it can be easily ported to any other I2C-enabled microcontroller supported by ModusToolbox&trade;.
 
 The availability of the library via ModusToolbox&trade; vastly simplifies the steps to integrate the library into existing, or new ModusToolbox&trade; applications. Further, the library provides an easy-to-use abstraction of the I2C communication to the OPTIGA&trade; Authenticate NBT to speed-up the development of applications with the OPTIGA&trade; Authenticate NBT. The embedded example applications for the OPTIGA&trade; Authenticate NBT are provided in the form of ModusToolbox&trade; applications (see [OPTIGA&trade; Authenticate NBT - GitHub overview](https://github.com/Infineon/optiga-nbt)) that build their application logic on top of this host library. Furthermore, this host library can be easily integrated in any ModusToolbox&trade;-based application which targets to utilize an OPTIGA&trade; Authenticate NBT device.
@@ -31,7 +31,7 @@ Infineon offers two reference hardware bundles to simplify the evaluation of the
 ![](images/nbt_development_kit_side.png)
 
 The [OPTIGA&trade; Authenticate NBT Development Kit](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Kit) is an assembly of hardware components which includes all required hardware components to develop and evaluate applications for the OPTIGA&trade; Authenticate NBT.
-The kit includes the OPTIGA&trade; Authenticate NBT Development Shield and, additionally, the [PSoC™ 62S2 Wi-Fi Bluetooth&reg; Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439) as host microcontroller board.
+The kit includes the OPTIGA&trade; Authenticate NBT Development Shield and, additionally, the [PSOC™ 62S2 Wi-Fi Bluetooth&reg; Prototyping Kit](https://www.infineon.com/CY8CPROTO-062S2-43439) as host microcontroller board.
 For more information about the OPTIGA&trade; Authenticate NBT Development Kit refer to the user guide, available on its [product page](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Kit).
 
 **Figure 2. OPTIGA&trade; Authenticate NBT Development Shield (including Arduino-UNO compatible adapter)**
@@ -57,7 +57,7 @@ The applications show the usage of the ModusToolbox&trade; C host library in com
 
 ### Alternative host microcontroller
 
-For the evaluation of the OPTIGA&trade; Authenticate NBT, other host boards than the [OPTIGA&trade; Authenticate NBT Development Kit's](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Kit) default host board [(PSoC™ 62S2 Wi-Fi Bluetooth&reg; Prototyping Kit)](https://www.infineon.com/CY8CPROTO-062S2-43439) may be desired.
+For the evaluation of the OPTIGA&trade; Authenticate NBT, other host boards than the [OPTIGA&trade; Authenticate NBT Development Kit's](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Kit) default host board [(PSOC™ 62S2 Wi-Fi Bluetooth&reg; Prototyping Kit)](https://www.infineon.com/CY8CPROTO-062S2-43439) may be desired.
 The easiest option to evaluate the OPTIGA&trade; Authenticate NBT in an alternative microcontroller setup is by utilizing the [OPTIGA&trade; Authenticate NBT Development Shield](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Shield) and connecting it to the desired host microcontroller (board). See the OPTIGA&trade; Authenticate NBT Development Shield's [product page](https://www.infineon.com/OPTIGA-Authenticate-NBT-Dev-Shield) for more information.
 
 **Table 1. Mapping of the OPTIGA&trade; Authenticate NBT Development Shield's pins to a an alternative microcontroller board**
@@ -74,7 +74,7 @@ The host microcontroller's pins to connect to the OPTIGA&trade; Authenticate NBT
 
 #### Supported by ModusToolbox&trade;
 
-If the desired microcontroller board is supported and available in ModusToolbox&trade;, it is recommended to utilize this ecosystem and the included OPTIGA&trade; Authenticate NBT Host Library for ModusToolbox&trade; for the evaluation and development of applications. The host library for ModusToolbox&trade; includes the implementation of a platform-abstraction for the [(PSoC™ 62S2 Wi-Fi Bluetooth&reg; Prototyping Kit)](https://www.infineon.com/CY8CPROTO-062S2-43439), based on the ModusToolbox&trade; HAL layer. This implementation can be utilized to reduce the effort of migrating the OPTIGA&trade; Authenticate NBT library/applications to any platform supported by ModusToolbox&trade;.
+If the desired microcontroller board is supported and available in ModusToolbox&trade;, it is recommended to utilize this ecosystem and the included OPTIGA&trade; Authenticate NBT Host Library for ModusToolbox&trade; for the evaluation and development of applications. The host library for ModusToolbox&trade; includes the implementation of a platform-abstraction for the [(PSOC™ 62S2 Wi-Fi Bluetooth&reg; Prototyping Kit)](https://www.infineon.com/CY8CPROTO-062S2-43439), based on the ModusToolbox&trade; HAL layer. This implementation can be utilized to reduce the effort of migrating the OPTIGA&trade; Authenticate NBT library/applications to any platform supported by ModusToolbox&trade;.
 
 The following steps are required after adding this host library to a custom ModusToolbox&trade;, application.
 The application needs to configure and initialize its peripherals according to the connection with the OPTIGA&trade; Authenticate NBT. The resulting HAL abstraction objects (for example, I2C and IRQ) can then be passed to the respective initialization functions of the host library. After the initialization, the library implicitly utilizes the platform-specific hardware peripherals to communicate with the OPTIGA&trade; Authenticate NBT. While certain interfaces are implicitly handled within the library's communication stack (for example I2C), others need to be handled by the application itself (for example the IRQ).
