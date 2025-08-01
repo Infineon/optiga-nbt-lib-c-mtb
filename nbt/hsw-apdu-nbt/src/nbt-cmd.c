@@ -129,7 +129,7 @@ static ifx_status_t fap_encode(const nbt_file_access_policy_t *fap_policy,
 
 #if (IFX_VALIDATE_NULL_PTR)
     if (IFX_VALIDATE_NULL_PTR_MEMORY(fap_policy) ||
-        IFX_VALIDATE_NULL_PTR_BLOB(fap_bytes))
+        IFX_VALIDATE_NULL_PTR_MEMORY(fap_bytes))
     {
         return IFX_ERROR(NBT_CMD, NBT_GET_FAP_BYTES, IFX_ILLEGAL_ARGUMENT);
     }
